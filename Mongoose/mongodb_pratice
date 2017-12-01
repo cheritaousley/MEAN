@@ -1,0 +1,88 @@
+//Creating a datbase called 'my_first_db'//
+
+> use my_first_db 
+switched to db my_first_db
+
+//checking for the current db im in//
+
+> db
+my_first_db
+
+//Creating a 'students' collection//
+
+> db.createCollection("students")
+{ "ok" : 1 }
+
+//create 5 students with this included in their document//
+> db.students.insert({name: "Jane", home_state: "Illinois", lucky_number: 7, birthday: {month: 11, day: 11, year: 1991}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name: "Joe", home_state: "Lousiana", lucky_number: 11, birthday: {month: 01, day: 01, year: 1989}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name: "Connor", home_state: "Wisconsin", lucky_number: 14, birthday: {month: 03, day: 13, year: 1992}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name: "Ashley", home_state: "Arizona", lucky_number: 21, birthday: {month: 09, day: 19, year: 1995}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name: "John", home_state: "District of Columbia", lucky_number: 63, birthday: {month: 12, day: 29, year: 1999}})
+WriteResult({ "nInserted" : 1 })
+
+//seeing all documents in collection //
+> db.students.find({})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 } }
+{ "_id" : ObjectId("5a2082881ee25604ccd7b8c2"), "name" : "Joe", "home_state" : "Lousiana", "lucky_number" : 11, "birthday" : { "month" : 1, "day" : 1, "year" : 1989 } }
+{ "_id" : ObjectId("5a2082d21ee25604ccd7b8c3"), "name" : "Connor", "home_state" : "Wisconsin", "lucky_number" : 14, "birthday" : { "month" : 3, "day" : 13, "year" : 1992 } }
+{ "_id" : ObjectId("5a2083031ee25604ccd7b8c4"), "name" : "Ashley", "home_state" : "Arizona", "lucky_number" : 21, "birthday" : { "month" : 9, "day" : 19, "year" : 1995 } }
+{ "_id" : ObjectId("5a2083401ee25604ccd7b8c5"), "name" : "John", "home_state" : "District of Columbia", "lucky_number" : 63, "birthday" : { "month" : 12, "day" : 29, "year" : 1999 } }
+
+//find document where person is from Illinois//
+
+> db.students.find({home_state: "Illinois"})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 } }
+
+//find person where person lucky number is greater than 3//
+> db.students.find({lucky_number: {$gt: 3}})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 } }
+{ "_id" : ObjectId("5a2082881ee25604ccd7b8c2"), "name" : "Joe", "home_state" : "Lousiana", "lucky_number" : 11, "birthday" : { "month" : 1, "day" : 1, "year" : 1989 } }
+{ "_id" : ObjectId("5a2082d21ee25604ccd7b8c3"), "name" : "Connor", "home_state" : "Wisconsin", "lucky_number" : 14, "birthday" : { "month" : 3, "day" : 13, "year" : 1992 } }
+{ "_id" : ObjectId("5a2083031ee25604ccd7b8c4"), "name" : "Ashley", "home_state" : "Arizona", "lucky_number" : 21, "birthday" : { "month" : 9, "day" : 19, "year" : 1995 } }
+{ "_id" : ObjectId("5a2083401ee25604ccd7b8c5"), "name" : "John", "home_state" : "District of Columbia", "lucky_number" : 63, "birthday" : { "month" : 12, "day" : 29, "year" : 1999 } }
+
+//adding a field to each student collection called 'interests' that is an array//
+> db.students.update({}, {$set: {"interests": ["coding", "brunch", "MongoDB"]}}, {multi: true})
+WriteResult({ "nMatched" : 5, "nUpserted" : 0, "nModified" : 5 })
+
+//adding more interests to a specific person//
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$push: {"interests" :[ "eating"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$push: {"interests" :[ "taxes"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$pull: {"interests" :[ "taxes"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+> db.students.find({name:"Jane"})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 }, "interests" : [ "coding", "brunch", "MongoDB", [ "eating" ] ] }
+
+//removing an interest from the array//
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$pull: {"interests" :[ "eating"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$push: {"interests" : "eating"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+//looking for a specific student collection//
+> db.students.find({name:"Jane"})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 }, "interests" : [ "coding", "brunch", "MongoDB", "eating" ] }
+
+//removing an entire document from a student collection//
+> db.students.remove({name: "Connor"})
+WriteResult({ "nRemoved" : 1 })
+
+//viewing all students//
+> db.students.find({})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 }, "interests" : [ "coding", "brunch", "MongoDB", "eating" ] }
+{ "_id" : ObjectId("5a2082881ee25604ccd7b8c2"), "name" : "Joe", "home_state" : "Lousiana", "lucky_number" : 11, "birthday" : { "month" : 1, "day" : 1, "year" : 1989 }, "interests" : [ "coding", "brunch", "MongoDB" ] }
+{ "_id" : ObjectId("5a2083031ee25604ccd7b8c4"), "name" : "Ashley", "home_state" : "Arizona", "lucky_number" : 21, "birthday" : { "month" : 9, "day" : 19, "year" : 1995 }, "interests" : [ "coding", "brunch", "MongoDB" ] }
+{ "_id" : ObjectId("5a2083401ee25604ccd7b8c5"), "name" : "John", "home_state" : "District of Columbia", "lucky_number" : 63, "birthday" : { "month" : 12, "day" : 29, "year" : 1999 }, "interests" : [ "coding", "brunch", "MongoDB" ] }
+
+//removing a field from the collection//
+> db.students.remove({lucky_number: {$gt: 0}}, {multi:true})
+WriteResult({ "nRemoved" : 4 })
+> 

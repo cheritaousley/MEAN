@@ -1,0 +1,344 @@
+Last login: Wed Nov 22 16:05:14 on ttys002
+Cheritas-MacBook-Air:survey cheritaousley$ cd /~
+-bash: cd: /~: No such file or directory
+Cheritas-MacBook-Air:survey cheritaousley$ cd ~
+Cheritas-MacBook-Air:~ cheritaousley$ pwd
+/Users/cheritaousley
+Cheritas-MacBook-Air:~ cheritaousley$ ls
+Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		destination	dumps		main
+Cheritas-MacBook-Air:~ cheritaousley$ cd Applications/
+Cheritas-MacBook-Air:Applications cheritaousley$ ls
+Chrome Apps.localized
+Cheritas-MacBook-Air:Applications cheritaousley$ cd /Applications/MySQLWorkbench.app/Contents/MacOS
+Cheritas-MacBook-Air:MacOS cheritaousley$ ls
+MySQLWorkbench	mysql		mysqldump	wbcopytables
+Cheritas-MacBook-Air:MacOS cheritaousley$ cd mysql
+mysql      mysqldump  
+Cheritas-MacBook-Air:MacOS cheritaousley$ cd mysql
+mysql      mysqldump  
+Cheritas-MacBook-Air:MacOS cheritaousley$ cd mysqldump 
+-bash: cd: mysqldump: Not a directory
+Cheritas-MacBook-Air:MacOS cheritaousley$ ls
+MySQLWorkbench	mysql		mysqldump	wbcopytables
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --defaults-file="/var/folders/z7/x_z9vd_171q4npmtw2frf0th0000gn/T/tmpVO5vdc/extraparams.cnf"  --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+mysqldump: [ERROR] Could not open required defaults file: /var/folders/z7/x_z9vd_171q4npmtw2frf0th0000gn/T/tmpVO5vdc/extraparams.cnf
+mysqldump: [ERROR] Fatal error in defaults handling. Program aborted!
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --defaults-file="/var/folders/z7/x_z9vd_171q4npmtw2frf0th0000gn/T/tmpVO5vdc/extraparams.cnf"  --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+mysqldump: [ERROR] Could not open required defaults file: /var/folders/z7/x_z9vd_171q4npmtw2frf0th0000gn/T/tmpVO5vdc/extraparams.cnf
+mysqldump: [ERROR] Fatal error in defaults handling. Program aborted!
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --defaults-file="/var/folders/z7/x_z9vd_171q4npmtw2frf0th0000gn/T/tmpVO5vdc/extraparams.cnf"  --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+mysqldump: [ERROR] Could not open required defaults file: /var/folders/z7/x_z9vd_171q4npmtw2frf0th0000gn/T/tmpVO5vdc/extraparams.cnf
+mysqldump: [ERROR] Fatal error in defaults handling. Program aborted!
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: NO) when trying to connect
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: NO) when trying to connect
+Cheritas-MacBook-Air:MacOS cheritaousley$ cls
+-bash: cls: command not found
+Cheritas-MacBook-Air:MacOS cheritaousley$ clear
+
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root —password=root --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: NO) when trying to connect
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root —password=root --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"[B
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: NO) when trying to connect
+Cheritas-MacBook-Air:MacOS cheritaousley$ clear
+
+
+
+
+
+
+
+
+
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root —password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: NO) when trying to connect
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root —password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: NO) when trying to connect
+Cheritas-MacBook-Air:MacOS cheritaousley$ 
+Cheritas-MacBook-Air:MacOS cheritaousley$ 
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+Enter password: 
+-- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
+--
+-- Host: localhost    Database: user
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+mysqldump: Got error: 1049: Unknown database 'user' when selecting the database
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=3306 --no-data "user"
+Enter password: 
+-- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
+--
+-- Host: localhost    Database: user
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+mysqldump: Got error: 1049: Unknown database 'user' when selecting the database
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+Enter password: 
+-- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
+--
+-- Host: localhost    Database: user
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+mysqldump: Got error: 1049: Unknown database 'user' when selecting the database
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=3306 --no-data "users"
+Enter password: 
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: YES) when trying to connect
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=3306 --no-data "users"
+Enter password: 
+-- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
+--
+-- Host: localhost    Database: users
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "user"
+Enter password: 
+-- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
+--
+-- Host: localhost    Database: user
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+mysqldump: Got error: 1049: Unknown database 'user' when selecting the database
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "thewall"
+Enter password: 
+-- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
+--
+-- Host: localhost    Database: thewall
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+mysqldump: Got error: 1049: Unknown database 'thewall' when selecting the database
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "theWall"
+Enter password: 
+-- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
+--
+-- Host: localhost    Database: theWall
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+mysqldump: Got error: 1049: Unknown database 'thewall' when selecting the database
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data 
+Usage: mysqldump [OPTIONS] database [tables]
+OR     mysqldump [OPTIONS] --databases [OPTIONS] DB1 [DB2 DB3...]
+OR     mysqldump [OPTIONS] --all-databases [OPTIONS]
+For more options, use mysqldump --help
+Cheritas-MacBook-Air:MacOS cheritaousley$ clear
+
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data 
+Usage: mysqldump [OPTIONS] database [tables]
+OR     mysqldump [OPTIONS] --databases [OPTIONS] DB1 [DB2 DB3...]
+OR     mysqldump [OPTIONS] --all-databases [OPTIONS]
+For more options, use mysqldump --help
+Cheritas-MacBook-Air:MacOS cheritaousley$ mysqldump --tz-utc=FALSE --disable-keys=FALSE --default-character-set=utf8 --max_allowed_packet=1G --host=localhost --user=root --password --dump-date=FALSE --lock-tables=FALSE --add-locks=FALSE --port=8889 --no-data "informtion_schema"
+Enter password: 
+-- MySQL dump 10.13  Distrib 5.7.19, for osx10.12 (x86_64)
+--
+-- Host: localhost    Database: informtion_schema
+-- ------------------------------------------------------
+-- Server version	5.7.19
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+mysqldump: Got error: 1049: Unknown database 'informtion_schema' when selecting the database
+Cheritas-MacBook-Air:MacOS cheritaousley$ clear
+
+Cheritas-MacBook-Air:MacOS cheritaousley$ mongo
+MongoDB shell version v3.4.10
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.4.10
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	http://docs.mongodb.org/
+Questions? Try the support group
+	http://groups.google.com/group/mongodb-user
+Server has startup warnings: 
+2017-11-30T15:04:04.298-0600 I CONTROL  [initandlisten] 
+2017-11-30T15:04:04.298-0600 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2017-11-30T15:04:04.298-0600 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2017-11-30T15:04:04.298-0600 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2017-11-30T15:04:04.299-0600 I CONTROL  [initandlisten] 
+2017-11-30T15:04:04.299-0600 I CONTROL  [initandlisten] 
+2017-11-30T15:04:04.299-0600 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+> show db
+2017-11-30T15:23:44.809-0600 E QUERY    [thread1] Error: don't know how to show [db] :
+shellHelper.show@src/mongo/shell/utils.js:918:11
+shellHelper@src/mongo/shell/utils.js:671:15
+@(shellhelp2):1:1
+> show dbs
+admin  0.000GB
+local  0.000GB
+> use my_first_db
+switched to db my_first_db
+> show dbs
+admin  0.000GB
+local  0.000GB
+> db
+my_first_db
+> db.createCollection("students")
+{ "ok" : 1 }
+> db.students.insert({name: "Jane", home_state: "Illinois", lucky_number: 7, birthday: {month: 11, day: 11, year: 1991}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name: "Joe", home_state: "Lousiana", lucky_number: 11, birthday: {month: 01, day: 01, year: 1989}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name: "Connor", home_state: "Wisconsin", lucky_number: 14, birthday: {month: 03, day: 13, year: 1992}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name: "Ashley", home_state: "Arizona", lucky_number: 21, birthday: {month: 09, day: 19, year: 1995}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name: "John", home_state: "District of Columbia", lucky_number: 63, birthday: {month: 12, day: 29, year: 1999}})
+WriteResult({ "nInserted" : 1 })
+> db.students.find({))
+2017-11-30T16:16:49.661-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:18
+> db.students.find({})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 } }
+{ "_id" : ObjectId("5a2082881ee25604ccd7b8c2"), "name" : "Joe", "home_state" : "Lousiana", "lucky_number" : 11, "birthday" : { "month" : 1, "day" : 1, "year" : 1989 } }
+{ "_id" : ObjectId("5a2082d21ee25604ccd7b8c3"), "name" : "Connor", "home_state" : "Wisconsin", "lucky_number" : 14, "birthday" : { "month" : 3, "day" : 13, "year" : 1992 } }
+{ "_id" : ObjectId("5a2083031ee25604ccd7b8c4"), "name" : "Ashley", "home_state" : "Arizona", "lucky_number" : 21, "birthday" : { "month" : 9, "day" : 19, "year" : 1995 } }
+{ "_id" : ObjectId("5a2083401ee25604ccd7b8c5"), "name" : "John", "home_state" : "District of Columbia", "lucky_number" : 63, "birthday" : { "month" : 12, "day" : 29, "year" : 1999 } }
+> db.sudents.find({home_state: "Illinois"})
+> db.students.find({home_state: "Illinois"})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 } }
+> db.students.find({lucky_number: {$gt: 3})
+... 
+... db.students.find({home_state: "Illinois"})
+... db.students.find({home_state: "Illinois"}})
+2017-11-30T16:24:52.832-0600 E QUERY    [thread1] SyntaxError: missing } after property list @(shell):1:40
+> db.students.find({lucky_number: {$gt: 3}})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 } }
+{ "_id" : ObjectId("5a2082881ee25604ccd7b8c2"), "name" : "Joe", "home_state" : "Lousiana", "lucky_number" : 11, "birthday" : { "month" : 1, "day" : 1, "year" : 1989 } }
+{ "_id" : ObjectId("5a2082d21ee25604ccd7b8c3"), "name" : "Connor", "home_state" : "Wisconsin", "lucky_number" : 14, "birthday" : { "month" : 3, "day" : 13, "year" : 1992 } }
+{ "_id" : ObjectId("5a2083031ee25604ccd7b8c4"), "name" : "Ashley", "home_state" : "Arizona", "lucky_number" : 21, "birthday" : { "month" : 9, "day" : 19, "year" : 1995 } }
+{ "_id" : ObjectId("5a2083401ee25604ccd7b8c5"), "name" : "John", "home_state" : "District of Columbia", "lucky_number" : 63, "birthday" : { "month" : 12, "day" : 29, "year" : 1999 } }
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" : 'coding'}})
+... db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" : 'coding'})
+... db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" : 'coding'}}})
+... db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" : 'coding'}}))
+2017-11-30T16:33:49.229-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" : 'coding'}}))
+2017-11-30T16:34:02.161-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" : 'coding'}}})
+2017-11-30T16:34:46.107-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({name: "Jane", {$addToSet: {"interest" : 'coding'}}})
+2017-11-30T16:38:23.419-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:34
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$push: {"interest" : 'coding'}}})
+2017-11-30T16:39:29.917-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" : 'coding', 'brunch', 'MongoDB'}}})
+2017-11-30T16:42:23.126-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" : "coding", "brunch", "MongoDB"}}})
+2017-11-30T16:43:20.650-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$Set: {"interest" :[ "coding", "brunch", "MongoDB"]}}})
+2017-11-30T16:45:59.721-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$AddToSet: {"interest" :[ "coding", "brunch", "MongoDB"]}}})
+2017-11-30T16:46:19.545-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" :[ "coding", "brunch", "MongoDB"]}}})
+2017-11-30T16:46:47.389-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1"), {$addToSet: {"interest" :[ "coding", "brunch", "MongoDB"]}}})
+2017-11-30T16:49:52.495-0600 E QUERY    [thread1] SyntaxError: invalid property id @(shell):1:63
+> db.students.update({}, {$set; {"interests": ["coding", "brunch", "MongoDB"]}}, {multi: true})
+2017-11-30T16:50:52.103-0600 E QUERY    [thread1] SyntaxError: missing : after property id @(shell):1:28
+> db.students.update({}, {$set: {"interests": ["coding", "brunch", "MongoDB"]}}, {multi: true})
+WriteResult({ "nMatched" : 5, "nUpserted" : 0, "nModified" : 5 })
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$push: {"interests" :[ "eating"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$push: {"interests" :[ "taxes"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$pull: {"interests" :[ "taxes"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find({name:"Jane"})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 }, "interests" : [ "coding", "brunch", "MongoDB", [ "eating" ] ] }
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$pull: {"interests" :[ "eating"]}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.update({_id: ObjectId("5a20823a1ee25604ccd7b8c1")}, {$push: {"interests" : "eating"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.students.find({name:"Jane"})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 }, "interests" : [ "coding", "brunch", "MongoDB", "eating" ] }
+> db.students.remove({name: "Connor"})
+WriteResult({ "nRemoved" : 1 })
+> db.students.find({})
+{ "_id" : ObjectId("5a20823a1ee25604ccd7b8c1"), "name" : "Jane", "home_state" : "Illinois", "lucky_number" : 7, "birthday" : { "month" : 11, "day" : 11, "year" : 1991 }, "interests" : [ "coding", "brunch", "MongoDB", "eating" ] }
+{ "_id" : ObjectId("5a2082881ee25604ccd7b8c2"), "name" : "Joe", "home_state" : "Lousiana", "lucky_number" : 11, "birthday" : { "month" : 1, "day" : 1, "year" : 1989 }, "interests" : [ "coding", "brunch", "MongoDB" ] }
+{ "_id" : ObjectId("5a2083031ee25604ccd7b8c4"), "name" : "Ashley", "home_state" : "Arizona", "lucky_number" : 21, "birthday" : { "month" : 9, "day" : 19, "year" : 1995 }, "interests" : [ "coding", "brunch", "MongoDB" ] }
+{ "_id" : ObjectId("5a2083401ee25604ccd7b8c5"), "name" : "John", "home_state" : "District of Columbia", "lucky_number" : 63, "birthday" : { "month" : 12, "day" : 29, "year" : 1999 }, "interests" : [ "coding", "brunch", "MongoDB" ] }
+> db.students.remove({lucky_number}, {multi:true})
+2017-11-30T17:01:37.616-0600 E QUERY    [thread1] ReferenceError: lucky_number is not defined :
+@(shell):1:21
+> db.students.remove({lucky_number: {$gt: 0}}, {multi:true})
+WriteResult({ "nRemoved" : 4 })
+> 
