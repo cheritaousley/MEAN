@@ -20,28 +20,34 @@ module.exports = {
                 res.render('index',  {errors: err} )
             }
             else {
-                bcrypt.hash('user.password', 10)
-                    .then(hashed_password => {
-                    })
-                    .catch(error => {
-                    });
+                // bcrypt.hash('user.password', 10)
+                //     .then(hashed_password => {
+                //     })
+                //     .catch(error => {
+                //     });
+                console.log("IN SAVE SUCCESS");
                 req.session.currentUser = user._id;
-                res.redirect('/');
+                res.redirect('/success');
             }
         });
     },
     logging: function (req, res) {
         const email = req.body.email;
         const password = req.body.password;
+        console.log(req.body.password);
         User.findOne({email: req.body.email}, function(err, user) {
             if(user) {
-                bcrypt.compare('req.body.password', 'user.password')
-                    .then(function(err, result){ //must name this something different from the query 
-                        req.session.currentUser = user._id
-                        console.log("Successfully logged in!");
-                        res.redirect('/success');
+                console.log(user);
+                bcrypt.compare(req.body.password, user.password)
+                    .then(function(result){ //must name this something different from the query 
+                            req.session.currentUser = user._id
+                            console.log("Successfully logged in!");
+                            console.log(result);
+                            res.redirect('/success');
+                        
                     })
                     .catch(function(err, _result) {
+                        console.log("WRONG PASS")
                         console.log(err);
                         res.redirect('/login');
                 })
