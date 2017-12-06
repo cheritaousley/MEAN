@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login/Registration!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+        <a class="navbar-brand" href="/">Dashboard</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <form class="w-100" action="/users" method="post">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <span name="email"></span>
+                        <input name="email" class="form-control"  placeholder="Your Email" />
+                    </div>
+                    <div class="form-group">
+                        <span name="first_name"></span>
+                        <input name="first_name" class="form-control"  placeholder="Your First Name" />
+                    </div>
+                    <div class="form-group">
+                        <span name="last_name"></span>
+                        <input name="last_name" class="form-control"  placeholder="Your Last Name" />
+                    </div>
+                    <div class="form-group">
+                        <span name="password"></span>
+                        <input name="password" class="form-control" type="password" placeholder="Your Password" />
+                    </div>
+                    <div class="form-group">
+                        <span name="password_confirm"></span>
+                        <input name="password_confirm" class="form-control" type="password" placeholder="Confirm Password" />
+                    </div>
+                    <div class="form-group">
+                        <span name="birthday"></span>
+                        <input name="birthday" class="form-control" type="date" placeholder="Your Birthday" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default">Register!</button>
+                    </div>
+                    <% if(typeof(errors) != 'undefined' ) { %>
+                        <% for (var x in errors) { %>
+                            <% for(var y in errors[x]) { %>
+                            <h3>
+                                <%= errors[x][y].message %>
+                            </h3>
+                            <% } %>
+                        <% } %>
+                    <% } %>
+
+
+                </div>
+            </div>
+        </form>
+        <p>Already a User?</p>
+        <a href="/login"><button type="submit" class="btn btn-default">Login!</button></a>
+</body>
+
+</html>
