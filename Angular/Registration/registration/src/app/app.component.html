@@ -1,0 +1,172 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+<div class="container">
+  <div class="row">
+  <form (submit) = "onSubmit()" #userForm="ngForm" class="w-100">
+    <div class="row">
+      <div class="col-6">
+        <div class="form-group">
+          <span name="firstName"></span>
+          <input type="text" name="firstName" class="form-control" placeholder="*First Name"
+          required
+          minlength="4"
+          maxlength="24"
+          [(ngModel)]= 'user.firstName'
+          #firstName="ngModel"/> <!--this is coming from user.ts model class that was created-->
+          <!-- <div class="errors"> -->
+          <!-- {{firstName.errors | json}} shows the errors -->
+          <!-- {{firstName.valid | json}} boolean -->
+          <!-- </div> -->
+          <div class="col-">
+          <div class="errors">
+            <p *ngIf="firstName.errors && firstName.dirty">First Name is required</p>
+            <!-- <p *ngIf="firstName.errors.minlength && firstName.dirty">First Name should be at least 4 characters long</p> -->
+          </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <span name="lastName"></span>
+          <input type="text" name="lastName" class="form-control" placeholder="*Last Name"
+          required 
+          minlength="2" 
+          maxlength="24" 
+          [(ngModel)]='user.lastName' 
+          #lastName="ngModel"/> 
+          <!-- <div class="errors">
+          {{lastName.errors | json}}
+          {{lastName.valid | json}}
+          </div> -->
+          <div class="errors" >
+            <p *ngIf="lastName.errors && lastName.dirty">Last Name is required</p>
+            <!-- <p *ngIf="lastName.errors.minlength && lastName.dirty">Last Name should be at least 2 characters long</p> -->
+          </div>
+        </div>
+        <div class="form-group">
+          <span name="email"></span>
+          <input type="text" name="email" class="form-control" placeholder="*Email"
+          required 
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+          [(ngModel)]='user.email' 
+          #email="ngModel"/> 
+          <!-- <div class="errors">
+          {{email.errors | json}} 
+          {{email.valid | json}}
+          </div> -->
+          <div class="errors">
+            <p *ngIf="email.errors && email.dirty">Email is required</p>
+            <!-- <p *ngIf="email.errors.pattern && email.dirty">Email must be valid</p> -->
+          </div>
+        </div>
+        <div class="form-group">
+          <span name="password"></span>
+          <input type="password" name="password" class="form-control" placeholder="*Password"
+          required 
+          minlength="8"  
+          [(ngModel)]='user.password' 
+          #password="ngModel"/> 
+          <!-- <div class="errors">
+          {{password.errors | json}} 
+          {{password.valid | json}}
+          </div> -->
+          <div class="errors" *ngIf="!password.valid">
+            <p *ngIf="password.errors && password.dirty">Password is required</p>
+            <p *ngIf="password.errors.minlength && password.dirty">Password must be at least 8 characters long</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <span name="confirmPW"></span>
+          <input type="password" name="confirmPW" class="form-control" placeholder="*Password Confirmation"
+          required 
+          minlength="8" 
+          [(ngModel)]='user.confirmPW' 
+          #confirmPW="ngModel"/> 
+          <!-- <div class="errors">
+          {{confirmPW.errors | json}} 
+          {{confirmPW.valid | json}}
+          </div> -->
+          <div class="errors">
+            <p *ngIf="confirmPW.errors && confirmPW.dirty">Password Confirmation is required</p>
+            <p *ngIf="user.password != user.confirmPW">Password Confirmation must match Password</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <span name="address"></span>
+          <input type="text" name="address" class="form-control" placeholder="*Street Address" 
+          required 
+          [(ngModel)]='user.address' 
+          #address="ngModel" />
+          <!-- <div class="errors">
+          {{address.errors | json}} 
+          {{address.valid | json}}
+          </div> -->
+          <div class="errors">
+            <p *ngIf="address.errors && address.dirty">Address is required</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <span name="city"></span>
+          <input type="text" name="city" class="form-control" placeholder="*City" 
+          required  
+          [(ngModel)]='user.city' 
+          #city="ngModel" /> 
+          <!-- <div class="errors">
+          {{city.errors | json}} 
+          {{city.valid | json}}
+          </div> -->
+          <div class="errors">
+            <p *ngIf="city.errors && city.dirty">City is required</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <span name="state">*State</span>
+          <select name="state" required [(ngModel)]='user.state' #state="ngModel">
+          <option value="Illinois">Illinois</option>
+          <option value="California">California</option>
+          <option value="Maryland">Maryland</option>
+          <option value="Nevada">Nevada</option>
+          <!-- <div class="errors">
+            {{state.errors | json}} 
+            {{state.valid | json}}
+          </div> -->
+          </select>
+        </div>
+        <div class="form-group">
+          <span name="lucky">*I'm feeling lucky</span>
+          <input type="radio" name="lucky" value="yes"
+          required
+          [(ngModel)]='user.lucky' 
+          #lucky="ngModel">Yes
+          <input type="radio" name="lucky" value="no"
+          required 
+          [(ngModel)]='user.lucky' 
+          #lucky="ngModel">No
+          <!-- <div class="errors">
+            {{lucky.errors | json}} 
+            {{lucky.valid | json}}
+          </div> -->
+          <div class="errors" *ngIf="!lucky.valid">
+            <p *ngIf="lucky.errors && lucky.dirty">Choosing how you feel is required</p>
+          </div>
+         </div> 
+  
+        <!-- <p *ngIf="!userForm.valid">Please correct fields!</p> -->
+        <div class="form-group">
+          <button class="btn btn-default" *ngIf="!userForm.valid" disabled>Register!</button>
+          <button type="submit" class="btn btn-default" *ngIf="userForm.valid">Register!</button>
+        </div>
+        <div class="complete" *ngIf="registered">
+          <p>Thank you for registering with us {{ user.firstName}}! We just sent you a confirmation email at {{user.email}} and we will send all mail to {{user.address}}, {{user.state}}.</p>
+          <p>Have a wonderful day!</p>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+</div>
+<!-- *ngIf="!confirmPW.valid" or *ngIf="confirm.errors" -->
+
+{{user | json}}
+

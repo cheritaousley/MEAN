@@ -38,8 +38,8 @@ module.exports = {
         User.findOne({email: req.body.email}, function(err, user) {
             if(user) {
                 console.log(user);
-                bcrypt.compare(req.body.password, user.password)
-                    .then(function(result){ //must name this something different from the query 
+                bcrypt.compare(req.body.password, user.password) //should not be strings!
+                    .then(function(result){ //must name this something different from the query //will come back true or false
                             req.session.currentUser = user._id
                             console.log("Successfully logged in!");
                             console.log(result);

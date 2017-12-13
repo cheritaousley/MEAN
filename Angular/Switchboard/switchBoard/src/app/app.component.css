@@ -1,0 +1,11 @@
+.wrapper{
+    vertical-align: top;
+    display: inline-block;
+    background: #310000;
+}
+.on { 
+    background-color: green;
+}
+button{
+    background-color: red;
+}

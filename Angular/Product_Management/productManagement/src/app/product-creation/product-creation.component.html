@@ -27,3 +27,13 @@
               <p *ngIf="price.errors && price.dirty">Price is required</p>
             </div>
           </div>
+          <div class="form-group">
+            <span name="imgURL"></span>
+            <input type="text" name="imgURL" class="form-control" placeholder="*Image URL" 
+            required 
+            [(ngModel)]='product.img' #price="ngModel"
+            />
+            <div class="errors">
+              <p *ngIf="price.errors && price.dirty">Price is required</p>
+            </div>
+          </div>

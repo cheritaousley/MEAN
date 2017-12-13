@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+   {{ title }}
+  </h1>
+<div *ngFor ="let power of powers; let idx =index" class= "wrapper">
+    <button *ngIf= 'power'(click)="turnPower(idx)" class="on">ON</button>
+    <button *ngIf='!power' (click)="turnPower(idx)" >OFF</button>
+</div>
+</div>
+<!-- [ngClass]="{'on':thing}" if thing is true, will appply on class (from .css)//toggling class on button
+[ngClass]="{'off': !thing}" if thing is false, will apply off class -->

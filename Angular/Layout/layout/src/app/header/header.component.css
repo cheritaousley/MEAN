@@ -1,0 +1,9 @@
+.wrapper{
+    margin-right: 1000px;
+    border: 10px solid black;
+    margin-bottom: 50px;
+    width: 1200px;
+    height: 100px;
+    text-align: left;
+    font-weight: bold;
+}

@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+<div>
+  <div [ngStyle]="{ 'font-weight': 'bold', 'display': 'inline-block' }">
+    <button (click)="onButtonClick('PST')">PST</button>
+  </div>
+  <div [ngStyle]="{  'font-weight': 'bold', 'display': 'inline-block' }">
+    <button (click)="onButtonClick('MST')">MST</button>
+  </div>
+  <div [ngStyle]="{  'font-weight': 'bold', 'display': 'inline-block' }">
+    <button (click)="onButtonClick('CST')">CST</button>
+  </div>
+  <div [ngStyle]="{  'font-weight': 'bold', 'display': 'inline-block' }">
+    <button (click)="onButtonClick('EST')">EST</button>
+  </div>
+  <div [ngStyle]="{  'font-weight': 'bold', 'display': 'inline-block' }">
+    <button (click)="onButtonClick()">clear</button>
+  </div>
+
+    <p>{{ date | date:'medium' }}</p>
+
+</div>

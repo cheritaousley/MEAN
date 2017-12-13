@@ -1,0 +1,34 @@
+.wrapper1{
+    display: block;
+}
+.human{
+    display: inline-block;
+    border: 5px solid black;
+}
+.saiyan{
+    display: inline-block;
+    border: 5px solid black;
+}
+.superS{
+    display: inline-block;
+    border: 5px solid black;
+}
+.wrapper2{
+    display: block;
+}
+.superS2{
+    display: inline-block;
+    border: 5px solid black;
+}
+.superS3{
+    display: inline-block;
+    border: 5px solid black;
+}
+.superS4{
+    display: inline-block;
+    border: 5px solid black;
+}
+.top{
+    display: block;
+    height: 100px;
+}

@@ -1,0 +1,35 @@
+<!-- <form (submit)='onSubmit()'>
+  GitHub Username: <input type="text" name='username' [(ngModel)]='username'>
+  <input type="submit" value='click this shit'>
+</form>
+  {{ username | json }} -->
+
+<div class="container">
+  <div class="row">
+    <form (submit)="onSubmit()" #userForm="ngForm" class="w-100">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <span name="content"></span>
+            GitHub Username: <input type="text" name="username" class="form-control" placeholder="*username" 
+            required 
+            minlength="4" 
+            [(ngModel)]= "username"
+        />
+            <!-- <div class="errors">
+              <p *ngIf="username.errors && username.dirty">username is required</p>
+            </div> -->
+            <div class="form-group">
+              <button class="btn btn-default" >Calculate the Score!</button>
+              <!-- <button type="submit" class="btn btn-default" *ngIf="userForm.valid">Calculate the Score!</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+     {{ username | json }}
+       {{ userScore | json }}
+       {{message }}
+         <!-- {{ apiData.public_repos | json }}
+         {{ apiData.followers | json }} -->
+         {{ errors | json }}
