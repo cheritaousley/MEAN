@@ -1,0 +1,29 @@
+<!-- <p>
+  notes works!
+</p> -->
+<div class="container">
+  <div class="row">
+    <form (submit)="onSubmit()" #userForm="ngForm" class="w-100">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <span name="conetent"></span>
+            <input type="text" name="content" class="form-control" placeholder="*Content" 
+            required 
+            minlength="4" 
+            [(ngModel)]='note.content'
+            #content="ngModel" />
+            <div class="errors">
+              <p *ngIf="content.errors && content.dirty">Note is required</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-default" *ngIf="!userForm.valid" disabled>Add Note!</button>
+            <button type="submit" class="btn btn-default" *ngIf="userForm.valid">Add Note!</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  {{NoteList | json}}
